@@ -1,0 +1,254 @@
+@import '../../variables.scss';
+
+.calc {
+  &__title {
+
+    font-family: "Exo2Light";
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+    margin-top: 0;
+    color: $accent-color;
+
+    &::before {
+      height: 2px;
+      content: '';
+      background: linear-gradient(to right, rgba(84, 176, 191, 1), rgba(84, 176, 191, 0));
+      position: absolute;
+      top: 62%;
+      left: calc(100% + 10px);
+      width: calc(1150px - 100%);
+    }
+  }
+
+  &__first {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+  }
+
+
+  &__header {
+    background-color: $accent-color;
+    color: #fff;
+    padding: 10px 20px;
+  }
+
+  &__h2 {
+    font-family: "Exo2Light";
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    padding: 10px 20px;
+  }
+
+  &__fieldset {
+    line-height: 37px;
+  }
+
+  &__field {
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &__content-hidden {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &__block {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  &__input[type=number] {
+    border: 2px solid #54b0bf;
+    background: #fff;
+    outline: none;
+    box-sizing: border-box;
+    width: auto;
+    height: 37px;
+    text-align-last: center;
+  }
+
+  &__input[type=number][disabled] {
+    background: #efefef;
+    border-color: #d0d0d0;
+    color: #d0d0d0;
+  }
+
+  &__input[type=number]::placeholder {
+    width: 100%;
+    padding-right: 40px;
+  }
+
+  &__input {
+    font-family: "Exo2Light";
+    font-size: 18px;
+  }
+
+  &__input[type=radio] {
+    opacity: 0;
+    position: absolute;
+  }
+
+
+
+  &__select {
+    font-family: "Exo2Light";
+    font-size: 16px;
+    border: 2px solid $accent-color;
+    background: #fff;
+    outline: none;
+    box-sizing: border-box;
+    width: 75px;
+    height: 37px;
+    text-align-last: center;
+  }
+
+  &__error {
+    position: absolute;
+    bottom: -100%;
+    left: 50%;
+
+
+    p {
+      background-color: #fff;
+      padding: 6px 10px;
+      color: red;
+      border: 1px solid #e3e3e3;
+    }
+  }
+
+  .calc__block [type=radio]~label:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px $accent-color;
+    margin: 0 10px 2px 0;
+  }
+
+  .calc__block [type=radio]:checked~label:before {
+    background: $accent-color;
+  }
+
+  .calc__legend {
+    background: linear-gradient(to right, rgba(84, 176, 191, 1), rgba(84, 176, 191, 0));
+    padding: 5px 20px;
+    color: #fff;
+    font-size: 21px;
+  }
+
+}
+
+.label-left {
+  margin-right: 8px;
+}
+
+.label-right {
+  margin-left: 8px;
+}
+
+.calc-mr {
+  margin-right: 16px;
+}
+
+
+.info {
+
+  &__title {
+    width: 100%;
+    font-size: 32px;
+    font-family: "Exo2Light";
+    font-weight: 700;
+    color: #54b0bf;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  &__content {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      width: 125px;
+      height: 90px;
+      content: '';
+      background: #54b0bf;
+      transform: skewX(-45deg);
+      z-index: -1;
+    }
+
+    &::before {
+      top: -20px;
+      right: 0;
+    }
+
+    &::after {
+      bottom: -20px;
+      left: 0;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+  }
+
+  &__head {
+    background-color: #ddd;
+    text-align: right;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__value {
+    text-align: left;
+    background: #fff;
+    border-top: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    padding: 10px;
+  }
+}
+
+.submit {
+  padding: 30px 0;
+  margin: 0 auto;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #54b0bf;
+    border: 2px solid #54b0bf;
+    cursor: pointer;
+  }
+}

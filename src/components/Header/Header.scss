@@ -1,0 +1,31 @@
+.header {
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  &__phone-link {
+    color: #000;
+    font-size: 16px;
+    font-family: 'Exo2Light';
+    margin-bottom: 0;
+    display: block;
+    line-height: 1.1;
+  }
+
+  &__email-link {
+    color: #000;
+    font-size: 16px;
+    font-family: 'Exo2Light';
+    margin-bottom: 0;
+    display: block;
+    line-height: 1.1;
+  }
+
+  &__img {
+    height: 90px;
+  }
+}
