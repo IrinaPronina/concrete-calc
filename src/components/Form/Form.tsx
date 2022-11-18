@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import InputNumber from '../InputNumber/InputNumber';
-import AreaBlock from './AreaBlock/AreaBlock';
+import AreaBlockContainer from '../../containers/AreaBlockContainer'
 import './Form.scss';
 
 const Form: React.FC = () => {
@@ -31,7 +31,7 @@ const Form: React.FC = () => {
         </div>
       </div>
       <h3 className="calc__subtitle">Введите Ваши данные:</h3>
-      <AreaBlock/>
+      <AreaBlockContainer/>
       <div className="calc__fieldset">
         <div className="calc__legend">Ваше основание</div>
         <div className="calc__field">
